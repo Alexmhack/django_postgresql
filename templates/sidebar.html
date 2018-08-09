@@ -1,7 +1,8 @@
 <div class="list-group">
+  <h3 class="text-center">Latest Tutorials</h3>
   {% for blog in latest_list %}
   
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start {% if forloop.counter == 1%}active{% endif %}">
+  <a href="{{ blog.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start {% if forloop.counter == 1%}active{% endif %}">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">{{ blog.title }}</h5>
       <small>{{ blog.published_date }}</small>
