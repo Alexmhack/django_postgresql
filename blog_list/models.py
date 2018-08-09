@@ -11,3 +11,6 @@ class Blog(models.Model):
 
 	def __str__(self):
 		return f"Blog: {self.title}"
+
+	def get_absolute_url(self):
+		return reverse("blog-detail", args=[str(self.id)])
