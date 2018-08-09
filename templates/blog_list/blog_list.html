@@ -39,11 +39,15 @@
 						  <div class="card-body">
 
 						    <!-- Title -->
-						    <h4 class="card-title">{{ blog.title|title }}</h4>
+						    <a href="{{ blog.get_absolute_url }}">
+						    	<h4 class="card-title">{{ blog.title|title }}</h4>
+						    </a>
 						    <!-- Text -->
 						    <p class="card-text">{{ blog.content }}</p>
 						    <!-- Button -->
-						    <a href="#" class="btn btn-primary">Button</a>
+						    {% if user.is_authenticated %}
+						    	<a href="#" class="btn btn-primary">Options</a>
+						    {% endif %}
 
 						  </div>
 
