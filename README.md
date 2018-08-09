@@ -27,3 +27,4 @@ Inside our django project settings.py, set the database as the postgresql like s
     }
 
 # DJANGO USAGE
+Just create models and makemigrations and migrate, the new database should work fine
