@@ -4,17 +4,11 @@
 	Latest Blogs
 {% endblock %}
 
-{% block content %}
-	
-	<div class="container mt-5 mb-5">
-	{% if blog_list %}
 
-		<!-- Main Layout -->
-		<main class="row">
-			
-			<!-- First Col -->
-			<!-- the end tag for this div won't show because we have an extra div tag in condition -->
-			<div class="col-md-9 container">
+	
+	
+			{% block content %}
+			{% if blog_list %}
 
 				<div class="row">
 					{% for blog in blog_list %}
@@ -58,25 +52,7 @@
 					{% endfor %}
 				</div>
 
-			</div>
-
-
-			<!-- /First Col -->
-
-			<!-- Second Col -->
-			<div class="col-md-3 container">
-
-				<h1>SIDEBAR OPTIONS WILL COME HERE</h1>
-
-			</div>
-			<!-- /Second Col -->
-
-		</main>
-		<!-- /Main Layout -->
-
-	{% else %}
-
-	{% endif %}
-	</div>
-
-{% endblock content %}
+			{% else %}
+				<h1>No Blogs are available.</h1>
+			{% endif %}
+			{% endblock content %}
