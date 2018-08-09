@@ -11,7 +11,7 @@ class BlogListView(generic.ListView):
 
 	def get_context_data(self, **kwargs):
 		context = super(BlogListView, self).get_context_data(**kwargs)
-		context['flight_list_view'] = Blog.objects.filter(
+		context['latest_list'] = Blog.objects.filter(
 			published_date__lte=datetime.now() + timedelta(days=-3))[:5]
 		return context
 
