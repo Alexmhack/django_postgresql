@@ -67,8 +67,7 @@
                     </div>
                 </li>
             {% else %}
-                <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" onclick="location.href=
-                type="submit">Login</button>
+                <a class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" href="{% url 'login' %}" type="submit">Login</a>
             {% endif %}
         </ul>
         <!-- /Right Links -->
