@@ -28,10 +28,32 @@
     {% include "navbar.html" %}
 
     <!-- Start your project here-->
-    
-    {% block content %}
+    <div class="container mt-5 mb-5">
 
-    {% endblock content %}
+        <!-- Main Layout -->
+        <main class="row">
+            
+            <!-- First Col -->
+            <!-- the end tag for this div won't show because we have an extra div tag in condition -->
+            <div class="col-md-9 container">
+            {% block content %}
+
+            {% endblock content %}
+            </div>
+            <!-- /First Col -->
+
+            <!-- Second Col -->
+            <div class="col-md-3 container">
+
+                {% include "sidebar.html" %}
+
+            </div>
+            <!-- /Second Col -->
+
+        </main>
+        <!-- /Main Layout -->
+
+    </div>
 
     <!-- /Start your project here-->
 
