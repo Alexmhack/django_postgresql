@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Latest Blogs
+{% endblock %}
+
+{% block content %}
+	
+	<div class="container">
+	{% if blog_list %}
+
+		<ul class="text-center">
+		{% for blog in blog_list %}
+
+			<li>
+				<h2 class="text-center">{{ blog.title }}</h2>
+				<small>{{ blog.published_date }}</small>
+				<p>{{ blog.content }}</p>
+			</li>
+
+
+		{% endfor %}
+		</ul>
+
+	{% else %}
+
+	{% endif %}
+	</div>
+
+{% endblock content %}
