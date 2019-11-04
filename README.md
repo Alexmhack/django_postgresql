@@ -17,14 +17,16 @@ CREATE DATABASE blog
 
 Inside our django project settings.py, set the database as the postgresql like so,
 
-'default': {
+```
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'blog',
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '',
-    }
+}
+```
 
 # DJANGO USAGE
-Just create models and makemigrations and migrate, the new database should work fine
+Just create models and run makemigrations and migrate command, the new database should work fine.
